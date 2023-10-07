@@ -51,7 +51,7 @@ const SingUp = () => {
                         </div>
 
                         <p className="text-center"> Already have an account? please
-                            <Link to='/register' className="ml-2 text-blue-600 text-base">Sing in</Link>
+                            <Link to='/login' className="ml-2 text-blue-600 text-base">Sing in</Link>
                         </p>
                     </form>
                 </div>

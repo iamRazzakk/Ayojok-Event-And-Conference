@@ -19,8 +19,8 @@ const Contact = () => {
     }
     return (
         <div>
-            <div className="h-screen flex justify-center items-center mr-4 text-white">
-                <div className="flex-1 bg-blue-700 px-20 text-white px-">
+            <div className="lg:h-screen   lg:flex justify-center items-center mr-4 text-white">
+                <div className="flex-1 lg:ml-6 rounded bg-blue-700 px-20 text-white px-">
                     <h1 className="text-5xl mt-12 mb-12 underline">Contact Information</h1>
                     <p className="mb-12">For inquiries and assistance, please contact us. We're here to help. Reach out today!</p>
                     <h1 className="text-xl mb-12"><b>Address:</b> 77/B Opera House Hall,
@@ -62,7 +62,7 @@ const Contact = () => {
                                     <label className="label">
                                         <span className="label-text">Message</span>
                                     </label>
-                                    <input type="text" name="message" placeholder="Wright your message" className="input input-bordered" required />
+                                    <input type="text" name="message" placeholder="your message" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Send</button>

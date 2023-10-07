@@ -3,7 +3,7 @@ import Event from "../Home/Event/Event";
 
 const Events = () => {
     return (
-        <div className="h-screen">
+        <div className="mt-12">
             <Event></Event>
         </div>
     );

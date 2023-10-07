@@ -1,31 +1,44 @@
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+const MyCarousel = () => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
 
-const Carusel = () => {
     return (
-        <div className="carousel h-[90vh] w-full">
-            <div id="slide1" className="carousel-item relative w-full">
-                <img src="../../../../public/1-2.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
+        <div className='max-w-[640px] lg:max-w-[1250px] mx-auto'>
+            <Slider {...settings}>
+                <div>
+                    <img src="../../../../public/1-2.jpg" alt="Image 1" />
                 </div>
-            </div>
-            <div id="slide2" className="carousel-item relative w-full">
-                <img src="../../../../public/2-2.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
+                <div>
+                    <img src="../../../../public/2-2.jpg" alt="Image 2" />
                 </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img src="../../../../public/3-2.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
+                <div>
+                    <img src="../../../../public/3-2.jpg" alt="Image 3" />
                 </div>
-            </div>
-            
+            </Slider>
         </div>
     );
 };
 
-export default Carusel;
+
+export default MyCarousel;

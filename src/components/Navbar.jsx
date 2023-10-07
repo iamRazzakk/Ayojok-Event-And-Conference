@@ -1,8 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import { signOut } from 'firebase/auth'; // Import the logout function from your authentication library
+import { useContext } from "react";
+import { AuthContext } from "./Provider/AuthProvider";
 
-const Navbar = ({ user }) => {
-
+const Navbar = () => {
+    const { user } = useContext(AuthContext)
+    console.log(user);
     const handleLogout = () => {
         signOut()
             .then(() => {
@@ -37,7 +40,7 @@ const Navbar = ({ user }) => {
             <NavLink
                 to="/booking"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "border-b border-transparent hover:border-indigo-500" : ""
+                    isPending ? "pending" : isActive ? "border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
                 }
             >
                 Booking
@@ -75,52 +78,70 @@ const Navbar = ({ user }) => {
                         <NavLink
                             to="/"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? " border-b border-transparent " : ""
+                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
                             }
                         >
-                            Home
+                            <p className="text-base font-semibold">Home</p>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
                             to="/event"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? " border-b border-transparent " : ""
+                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
                             }
                         >
-                            Event
+                            <p className="text-base font-semibold">Event</p>
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
                             to="/booking"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? " border-b border-transparent hover:border-indigo-500" : ""
+                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
                             }
                         >
-                            Booking
+                            <p className="text-base font-semibold">Booking</p>
+
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/speaker"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
+                            }
+                        >
+                            <p className="text-base font-semibold">Speaker</p>
+
                         </NavLink>
                     </li>
                     <li>
                         <NavLink
                             to="/contact"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? " border-b border-transparent hover:border-indigo-500" : ""
+                                isPending ? "pending" : isActive ? " border-b border-transparent text-blue-700 underline hover:border-indigo-500" : ""
                             }
                         >
-                            Contact
+                            <p className="text-base font-semibold">Contact</p>
                         </NavLink>
                     </li>
+
                 </ul>
             </div>
             <div className="navbar-end">
                 {user ? (
-                    <>
-                        <span>{user.email}</span>
+
+                    <div className="flex">
+                        {/* <img src={user.photoURL} alt="" /> */}
+                        <div className="w-10 rounded-full">
+                            <img src={user.photoURL} />
+                        </div>
                         <button className="btn btn-sm" onClick={handleLogout}>
                             Logout
                         </button>
-                    </>
+                    </div>
+
                 ) : (
                     <Link to="/login">
                         <button className="btn btn-sm">Login</button>

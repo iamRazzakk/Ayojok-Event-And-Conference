@@ -36,7 +36,7 @@ const Login = () => {
                             <input type="password" placeholder="password" name='password' className="input input-bordered bg-white" required />
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary">Log in</button>
                         </div>
                         <p className="text-center"> Or Sing Up Using
                             <Link to='/register' className="ml-2 text-blue-600 text-base">Sing Up</Link>
