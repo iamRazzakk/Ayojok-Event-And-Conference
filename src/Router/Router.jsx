@@ -1,10 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Pages/Home/Home";
-import Event from "../Pages/Event/Event";
+// import Event from "../Pages/Event/Events";
 import Booking from "../Pages/Booking/Booking";
 import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
+import SingUp from "../Pages/SingUp/SingUp";
+import Events from "../Pages/Event/Events";
+import Day1 from "../Pages/Home/Event/Day1/Day1";
+import Event from "../Pages/Home/Event/Event";
 
 
 const myCreatedRouter = createBrowserRouter([
@@ -17,8 +21,18 @@ const myCreatedRouter = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/event',
-                element: <Event></Event>
+                path: "/event",
+                element: <Events></Events>,
+                children: [
+                    {
+                        path: "/event",
+                        element: <Event></Event>
+                    },
+                    {
+                        path: "/event/day1",
+                        element: <Day1></Day1>,
+                    },
+                ],
             },
             {
                 path: '/booking',
@@ -31,6 +45,10 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <SingUp></SingUp>
             }
         ]
     }
