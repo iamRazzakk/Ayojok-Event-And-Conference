@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
         <footer className="footer p-10 text-base-content">
             <aside>
-                <img src="../../../public/logo.png" alt="" />
+                <img src="../logo.png" alt="" />
                 <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
             </aside>
             <nav>
@@ -16,7 +17,7 @@ const Footer = () => {
             <nav>
                 <header className="footer-title">Company</header>
                 <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
+                <Link to='/contact' className="link link-hover">Contact</Link>
                 <a className="link link-hover">Jobs</a>
                 <a className="link link-hover">Press kit</a>
             </nav>

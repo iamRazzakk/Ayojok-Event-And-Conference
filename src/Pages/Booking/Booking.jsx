@@ -16,9 +16,9 @@ const Booking = () => {
     }
     return (
         <div className="lg:h-screen  justify-center items-center">
-            <div className="lg:h-[80vh] flex justify-center items-center">
+            <div className="lg:h-[80vh] grid lg:grid-cols-2 mt-12">
                 <div className="flex-1 mr-2 ml-6">
-                    <img className="w-full h-96" src="../1.jpg" alt="" />
+                    <img className="w-full h-[420px]" src="../1.jpg" alt="" />
                 </div>
                 <div className="flex-1 ml-2">
                     <h1 className="text-5xl font-bold">World of Business Opportunities Management</h1>
