@@ -1,10 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../components/Provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-bootstrap";
+// import { Toast } from "react-toastify/dist/components";
 
 
 const Login = () => {
     const { signInUser } = useContext(AuthContext)
+    const [errormessage, setErrorMessage] = useState('')
     const handleLogin = e => {
         e.preventDefault()
         const email = e.target.email.value;
@@ -13,9 +17,12 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user);
+                toast.success("Login successful")
+
             })
             .catch(error => {
                 console.log(error);
+                setErrorMessage('invalid your email or password please try again')
             })
     }
     return (
@@ -38,9 +45,13 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Log in</button>
                         </div>
-                        <p className="text-center"> Or Sing Up Using
+                        {errormessage && (
+                            <span className="text-red-500">{errormessage}</span>
+                        )}
+                        <p className="text-center"> New here please
                             <Link to='/register' className="ml-2 text-blue-600 text-base">Sing Up</Link>
                         </p>
+                        <Toaster></Toaster>
                     </form>
                 </div>
             </div>

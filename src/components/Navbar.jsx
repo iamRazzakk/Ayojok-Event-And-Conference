@@ -4,10 +4,10 @@ import { useContext } from "react";
 import { AuthContext } from "./Provider/AuthProvider";
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
     console.log(user);
     const handleLogout = () => {
-        signOut()
+        logOut()
             .then(() => {
                 console.log("Logged out");
             })

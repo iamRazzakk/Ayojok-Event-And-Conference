@@ -1,9 +1,11 @@
-import { useState } from "react";
+import {  useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+
 
 
 const Contact = () => {
     const [isSubmit, setIsSubmit] = useState(false)
+
     const contactUs = e => {
         e.preventDefault()
         const name = e.target.name.value;

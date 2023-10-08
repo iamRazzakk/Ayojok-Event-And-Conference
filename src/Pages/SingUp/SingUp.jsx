@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../components/Provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const SingUp = () => {
@@ -15,9 +16,10 @@ const SingUp = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password, name);
-        createUser( email, password)
+        createUser(email, password)
             .then(result => {
                 console.log(result.user);
+                toast.success("Account created Successfully")
             })
             .catch(error => {
                 console.log(error);
@@ -53,6 +55,7 @@ const SingUp = () => {
                         <p className="text-center"> Already have an account? please
                             <Link to='/login' className="ml-2 text-blue-600 text-base">Sing in</Link>
                         </p>
+                        <Toaster></Toaster>
                     </form>
                 </div>
             </div>

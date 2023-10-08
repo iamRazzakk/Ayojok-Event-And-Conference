@@ -7,10 +7,10 @@ import Contact from "../Pages/Contact/Contact";
 import Login from "../Pages/Login/Login";
 import SingUp from "../Pages/SingUp/SingUp";
 import Events from "../Pages/Event/Events";
-import Day1 from "../Pages/Home/Event/Day1/Day1";
-import Event from "../Pages/Home/Event/Event";
+
 import Speaker from "../Pages/Home/Speaker/Speaker";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import EventDetail from "../Pages/Home/Event/EventDetail/EventDetail";
 
 
 const myCreatedRouter = createBrowserRouter([
@@ -25,6 +25,10 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: "/event",
                 element: <Events></Events>,
+            },
+            {
+                path: '/event/:id',
+                element: <EventDetail></EventDetail>
             },
             {
                 path: '/booking',
