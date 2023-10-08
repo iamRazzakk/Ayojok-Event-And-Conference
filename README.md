@@ -1,11 +1,6 @@
 # Business Event Management
 
 
-## Demo
-
-
-
-
 ## Technologies Used
 
 - React

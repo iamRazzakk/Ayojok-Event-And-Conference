@@ -36,7 +36,7 @@ const Event = () => {
                                         <button className="btn btn-primary w-full py-2 px-8">Visit more</button>
                                     </Link>
                                 ) : (
-                                    <p className="text-white">Please <Link className="bg-white text-black text-sm font-bold px-6 py-2 rounded" to="/login">log in</Link> to view event details.</p>
+                                    <Link  to="/login"><button className="bg-black text-white text-sm font-bold px-6 py-2 rounded">See detail</button></Link>
                                 )}
                             </div>
                         </div>
