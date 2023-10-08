@@ -2,12 +2,16 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../components/Provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { auth } from "../../Firebase/Firebase";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { FcGoogle } from "react-icons/fc";
+
+
 
 
 const SingUp = () => {
 
-    const { createUser } = useContext(AuthContext)
-    // console.log(authInfo);
+    const { createUser, loginWithGoogle } = useContext(AuthContext)
 
 
     const handleSingUp = e => {
@@ -25,6 +29,17 @@ const SingUp = () => {
                 console.log(error);
             })
     }
+    const handleSignInWithGoogle = () => {
+        const googleProvider = new GoogleAuthProvider();
+        signInWithPopup(auth, googleProvider)
+            .then((result) => {
+                console.log(result);
+                toast.success("Signed in with Google successfully");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    };
     return (
         <div className="hero min-h-screen bg-white">
             <div className="hero-content flex-col">
@@ -55,6 +70,9 @@ const SingUp = () => {
                         <p className="text-center"> Already have an account? please
                             <Link to='/login' className="ml-2 text-blue-600 text-base">Sing in</Link>
                         </p>
+                        <hr />
+                        {/* <button onClick={handleSignInWithGoogle}>Google</button> */}
+                        <div className="flex justify-center items-center text-2xl"><FcGoogle onClick={handleSignInWithGoogle}></FcGoogle></div>
                         <Toaster></Toaster>
                     </form>
                 </div>

@@ -134,9 +134,6 @@ const Navbar = () => {
 
                     <div className="flex">
                         {/* <img src={user.photoURL} alt="" /> */}
-                        <div className="w-10 rounded-full">
-                            <img src={user.photoURL} />
-                        </div>
                         <button className="btn btn-sm" onClick={handleLogout}>
                             Logout
                         </button>
