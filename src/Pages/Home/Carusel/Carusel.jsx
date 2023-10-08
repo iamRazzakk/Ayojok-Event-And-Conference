@@ -11,7 +11,7 @@ const MyCarousel = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                 },
             },
             {
@@ -20,11 +20,17 @@ const MyCarousel = () => {
                     slidesToShow: 1,
                 },
             },
+            {
+                breakpoint: 375,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
         ],
     };
 
     return (
-        <div className='max-w-[640px] lg:max-w-[1250px] mx-auto'>
+        <div className=''>
             <Slider {...settings}>
                 <div>
                     <img src="../1-2.jpg" alt="Image 1" />
