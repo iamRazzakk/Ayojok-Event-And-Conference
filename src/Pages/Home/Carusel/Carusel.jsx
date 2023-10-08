@@ -27,13 +27,13 @@ const MyCarousel = () => {
         <div className='max-w-[640px] lg:max-w-[1250px] mx-auto'>
             <Slider {...settings}>
                 <div>
-                    <img src="../../../../public/1-2.jpg" alt="Image 1" />
+                    <img src="../1-2.jpg" alt="Image 1" />
                 </div>
                 <div>
-                    <img src="../../../../public/2-2.jpg" alt="Image 2" />
+                    <img src="../2-2.jpg" alt="Image 2" />
                 </div>
                 <div>
-                    <img src="../../../../public/3-2.jpg" alt="Image 3" />
+                    <img src="../3-2.jpg" alt="Image 3" />
                 </div>
             </Slider>
         </div>

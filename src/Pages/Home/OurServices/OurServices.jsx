@@ -5,7 +5,7 @@ const OurServices = () => {
     return (
         <div className="flex justify-center items-center mt-12">
             <div className="flex-1 ml-16">
-                <img src="../../../../public/about-1 (1).png" alt="" />
+                <img src="../about-1 (1).png" alt="" />
             </div>
             <div className="flex-1">
                 <h1 className="text-5xl mb-4 text-blue-600">Welcome!</h1>
