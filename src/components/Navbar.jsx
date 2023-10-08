@@ -131,21 +131,26 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {user ? (
-
-                    <div className="flex">
-                        {/* <img src={user.photoURL} alt="" /> */}
-                        <button className="btn btn-sm" onClick={handleLogout}>
+                    <div className="flex items-center">
+                        <div className="w-10 h-10 rounded-full overflow-hidden">
+                            <img src={user.photoURL} alt="User Avatar" />
+                        </div>
+                        <p className="text-lg ml-2">{user.displayName}</p>
+                        <button
+                            className="btn btn-sm ml-2"
+                            onClick={handleLogout}
+                        >
                             Logout
                         </button>
                     </div>
-
                 ) : (
                     <Link to="/login">
                         <button className="btn btn-sm">Login</button>
                     </Link>
                 )}
+
             </div>
-        </div>
+        </div >
     );
 };
 
