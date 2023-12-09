@@ -29,17 +29,17 @@ const SingUp = () => {
                 console.log(error);
             })
     }
-    const handleSignInWithGoogle = () => {
-        const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                console.log(result);
-                toast.success("Signed in with Google successfully");
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
+    // const handleSignInWithGoogle = () => {
+    //     const googleProvider = new GoogleAuthProvider();
+    //     signInWithPopup(auth, googleProvider)
+    //         .then((result) => {
+    //             console.log(result);
+    //             toast.success("Signed in with Google successfully");
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // };
     return (
         <div className="hero min-h-screen bg-white">
             <div className="hero-content flex-col">
@@ -72,7 +72,7 @@ const SingUp = () => {
                         </p>
                         <hr />
                         {/* <button onClick={handleSignInWithGoogle}>Google</button> */}
-                        <div className="flex justify-center items-center text-2xl"><FcGoogle onClick={handleSignInWithGoogle}></FcGoogle></div>
+                        {/* <div className="flex justify-center items-center text-2xl"><FcGoogle onClick={handleSignInWithGoogle}></FcGoogle></div> */}
                         <Toaster></Toaster>
                     </form>
                 </div>

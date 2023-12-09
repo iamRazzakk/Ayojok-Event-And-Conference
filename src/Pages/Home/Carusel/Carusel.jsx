@@ -33,13 +33,13 @@ const MyCarousel = () => {
         <div className=''>
             <Slider {...settings}>
                 <div>
-                    <img src="../1-2.jpg" alt="Image 1" />
+                    <img className='opacit' src="../1-2.jpg" alt="Image 1" />
                 </div>
                 <div>
-                    <img src="../2-2.jpg" alt="Image 2" />
+                    <img className='opacit' src="../2-2.jpg" alt="Image 2" />
                 </div>
                 <div>
-                    <img src="../3-2.jpg" alt="Image 3" />
+                    <img className='opacit' src="../3-2.jpg" alt="Image 3" />
                 </div>
             </Slider>
         </div>

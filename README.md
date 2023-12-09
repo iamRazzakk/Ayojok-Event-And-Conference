@@ -1,9 +1,5 @@
 # Ayojok-event-and-conference
 
-[Live Link] (https://business-event-management-2023.netlify.app/)
-
-
-
 ## Description
 
 This is a project for business events managing.
@@ -32,9 +28,6 @@ This is a project for business events managing.
 - flowbite
 - AOS
 
-# What i do in this project
-
-
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**i am working on it**
+# Live Link
+[Live Link] (https://business-event-management-2023.netlify.app/)
